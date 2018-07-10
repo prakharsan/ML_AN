@@ -6,7 +6,7 @@ function J = computeCost(X, y, theta)
 % Initialize some useful values
 	
 	
-	m = length(y); % number of training examples
+	m = length(y); % # training examples
 	
 % You need to return the following variables correctly 
 
