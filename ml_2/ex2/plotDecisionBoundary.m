@@ -12,15 +12,16 @@ function plotDecisionBoundary(theta, X, y)
 plotData(X(:,2:3), y);
 hold on
 
-if size(X, 2) <= 3
+if size(X, 2) <= 3 % Because can't visualize more than 3 dimensions
     % Only need 2 points to define a line, so choose two endpoints
     plot_x = [min(X(:,2))-2,  max(X(:,2))+2];
-
+	
     % Calculate the decision boundary line
-    plot_y = (-1./theta(3)).*(theta(2).*plot_x + theta(1));
+    
+	plot_y = (-1./theta(3)).*(theta(2).*plot_x + theta(1));
 
     % Plot, and adjust axes for better viewing
-    plot(plot_x, plot_y)
+    plot(plot_x, plot_y);
     
     % Legend, specific for the exercise
     legend('Admitted', 'Not admitted', 'Decision Boundary')
