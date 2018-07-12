@@ -23,7 +23,7 @@ temp_t(1) = 0;
 	J = (-1/m)*sum(temp) + (1/m)*(lambda/2)*sum(temp_t.^2);
 	h = sigmoid(X*theta);
 	error = h - y;
-	grad = (1/m)*sum(X.*error) + (lambda/m)*temp_t;
+	grad = (1/m)*(sum(X.*error))' + (lambda/m)*temp_t;
 
 
 % =============================================================
