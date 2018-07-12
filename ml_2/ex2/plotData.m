@@ -12,7 +12,14 @@ figure; hold on;
 %               examples and 'ko' for the negative examples.
 %
 
-
+	pos = find(y==1); %stores the index number for positive cases
+	neg = find(y==0); %stores the index number for negative cases
+	
+	%plot examples
+	plot(X(pos,1),X(pos,2), 'k+','LineWidth',2, 'MarkerSize',7);
+	
+	plot(X(neg,1),X(neg,2),'ko','MarkerFaceColor','y','MarkerSize',7);
+	
 
 
 

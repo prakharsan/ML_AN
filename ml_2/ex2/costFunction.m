@@ -18,9 +18,15 @@ grad = zeros(size(theta));
 %               derivatives of the cost w.r.t. each parameter in theta
 %
 % Note: grad should have the same dimensions as theta
-%
+% COST FUNCTION
+% =============
 
-
+	h = sigmoid(X * theta);
+	temp=sum(y.*log(h)+(1-y).*log(1-h));
+	J= (-1/m)*temp;
+	
+	error = h - y;
+	grad = (1/m)*sum((X.*error));
 
 
 
